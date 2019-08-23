@@ -19,7 +19,7 @@ module.exports = function (app) {
             //loop over scores
             for (var j = 0; j < friends[i].scores; j++) {
                 //difference instead of sum
-                diff += friends[i].scores[j]- req.body.scores[j]
+                diff += friends[i].scores[j] - req.body.scores[j]
 
              //   sum += (friends[i].scores[j])
             }
