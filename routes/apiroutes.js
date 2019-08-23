@@ -17,26 +17,29 @@ module.exports = function (app) {
             let diff=0;
             
             //loop over scores
-            for (var j = 0; j < friends[i].scores; j++) {
-
+            for (var j = 0; j < req.body.scores.length; j++) {
+                let sum;
+               sum =  (req.body.scores[j])
             
                 //difference instead of sum
-                diff += parseInt(friends[i].scores[j]) - parseInt(req.body.scores[j])
-
+                diff += parseFloat(friends[i].scores[j]) - sum
+                
              //   sum += (friends[i].scores[j])
             }
             if (diff < userScore) {
+                 userScore=diff
 				 name = friends[i].name;
                  photo = friends[i].photo;
             }
-  
+            
         
 //just grabs last entry
         }
         friends.push(req.body)
         res.json({name: name, photo: photo});
         console.log(name)
+        console.log(req.body.scores)
     })
 }
 
-// need logic to post new user 
+// loop over user scores to get a sum or friends scores length?
