@@ -14,19 +14,23 @@ module.exports = function (app) {
         let userScore=Infinity
         //loop over friends data 
         for (var i = 0; i < friends.length; i++) {
-            var diff=0;
+            let diff=0;
             
             //loop over scores
             for (var j = 0; j < friends[i].scores; j++) {
+
+            
                 //difference instead of sum
-                diff += friends[i].scores[j] - req.body.scores[j]
+                diff += parseInt(friends[i].scores[j]) - parseInt(req.body.scores[j])
 
              //   sum += (friends[i].scores[j])
             }
             if (diff < userScore) {
-				name = friends[i].name;
-                photo = friends[i].photo;
+				 name = friends[i].name;
+                 photo = friends[i].photo;
             }
+  
+        
 //just grabs last entry
         }
         friends.push(req.body)
