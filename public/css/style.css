@@ -5,3 +5,22 @@
 .jumbotron{text-align:center;}
 
 .btn{margin:0 auto;}
+
+.homejumbo{
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+margin-top:100px;
+
+
+
+           
+}
+
+body { background-color:wheat;}
+i{text-shadow:
+     1px 1px blue, 
+    2px 2px blue, 
+    3px 3px blue, 
+    4px 4px blue, 
+    5px 5px blue, 
+    6px 6px blue;}
